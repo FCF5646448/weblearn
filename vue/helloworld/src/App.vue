@@ -1,12 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <h1>HelloWorld</h1>
-  <h2>To-Do List</h2>
-  <div>
+  <div id="App">
+    <h1>My To-Do List</h1>
+    <to-do-form @todo-added="addToDo"></to-do-form>
     <ul>
       <li v-for="item in ToDoItems" :key="item.id">
-      <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+        <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
       </li>
     </ul>
   </div>
@@ -14,12 +12,13 @@
 
 <script>
 import ToDoItem from './components/ToDoItem.vue';
+import ToDoForm from './components/ToDoForm.vue';
 import uniqueId from "lodash.uniqueid";
 
 export default {
   name: 'App',
   components: {
-    ToDoItem,
+    ToDoItem, ToDoForm,
   },
   data() {
     return {
@@ -28,9 +27,14 @@ export default {
         {id: uniqueId("todo-"), label: "Create a Vue project with the CLI", done: true},
         {id: uniqueId("todo-"), label: "Have Fun", done: true},
         {id: uniqueId("todo-"), label: "Create a to-do list", done: false},
-      ]
-    }
-  }
+      ],
+    };
+  },
+  methods: {
+    addToDo(toDoLabel) {
+      this.ToDoItems.push({id:uniqueId("todo-"), label:toDoLabel, done:false})
+    },
+  },
 }
 </script>
 
