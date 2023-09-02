@@ -1,15 +1,30 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MyComponent/>
+  <my-component 
+    :title="title" 
+    :age="age" 
+    name="fcf" 
+    :colors="colors"></my-component>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import MyComponent from './components/myComponents.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      title: "我是一个标题",
+      age: 20,
+      colors: ["red", "yellow", "white"]
+    }
+  },
   components: {
-    HelloWorld
+    HelloWorld, 
+    MyComponent
   }
 }
 </script>
