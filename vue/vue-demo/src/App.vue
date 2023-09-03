@@ -9,12 +9,16 @@
     :colors="colors"></my-component>
   <my-component2 @onEvent="getDataFromMyCompenent2"></my-component2>
   <p> {{ dataFromMyCompenent2 }}</p>
+  <my-component3/>
+  <swiper-component/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import MyComponent from './components/myComponents.vue'
 import MyComponent2 from './components/myComponent2.vue'
+import MyComponent3 from './components/myComponent3.vue'
+import SwiperComponent from './components/swiperComponent.vue'
 
 export default {
   name: 'App',
@@ -22,6 +26,8 @@ export default {
     HelloWorld, 
     MyComponent,
     MyComponent2,
+    MyComponent3,
+    SwiperComponent,
   },
   data() {
     return {
