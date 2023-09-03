@@ -1,9 +1,9 @@
 <template>
   <div id="App">
     <h1>My To-Do List</h1>
-    <to-do-form @todo-added="addToDo"></to-do-form>
+    <to-do-form @sendInput="addToDo"></to-do-form>
     <ul>
-      <li v-for="item in ToDoItems" :key="item.id">
+      <li v-for="(item, index) in ToDoItems" :key="index">
         <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
       </li>
     </ul>

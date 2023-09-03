@@ -1,6 +1,6 @@
 <template>
-    <input type="checkbox" :id="id" :checked="isDone" />
-    <label :for="id">{{label}}</label>
+    <input type="checkbox" :checked="isDone" />
+    <label>{{label}}</label>
 </template>
 
 <script>

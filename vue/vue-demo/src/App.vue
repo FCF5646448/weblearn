@@ -7,25 +7,37 @@
     :age="age" 
     name="fcf" 
     :colors="colors"></my-component>
+  <my-component2 @onEvent="getDataFromMyCompenent2"></my-component2>
+  <p> {{ dataFromMyCompenent2 }}</p>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import MyComponent from './components/myComponents.vue'
+import MyComponent2 from './components/myComponent2.vue'
 
 export default {
   name: 'App',
+  components: {
+    HelloWorld, 
+    MyComponent,
+    MyComponent2,
+  },
   data() {
     return {
       title: "我是一个标题",
       age: 20,
-      colors: ["red", "yellow", "white"]
+      colors: ["red", "yellow", "white"],
+      dataFromMyCompenent2: ""
     }
   },
-  components: {
-    HelloWorld, 
-    MyComponent
+  methods: {
+    getDataFromMyCompenent2(data) {
+      console.log(data);
+      this.dataFromMyCompenent2 = data;
+    }
   }
+
 }
 </script>
 

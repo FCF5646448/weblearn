@@ -1,5 +1,5 @@
 <template>
-    <h2> 我是单文件组件 </h2>
+    <h2> 组件数据正向传入 </h2>
     <p>title = {{ title }}</p>
     <p>age = {{ age }}</p>
     <p>name = {{ name }}</p>
