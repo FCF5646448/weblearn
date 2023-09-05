@@ -11,6 +11,7 @@
   <p> {{ dataFromMyCompenent2 }}</p>
   <my-component3/>
   <swiper-component/>
+  <AxiosComponent/>
 </template>
 
 <script>
@@ -19,6 +20,7 @@ import MyComponent from './components/myComponents.vue'
 import MyComponent2 from './components/myComponent2.vue'
 import MyComponent3 from './components/myComponent3.vue'
 import SwiperComponent from './components/swiperComponent.vue'
+import AxiosComponent from './components/axiosComponent.vue'
 
 export default {
   name: 'App',
@@ -28,6 +30,7 @@ export default {
     MyComponent2,
     MyComponent3,
     SwiperComponent,
+    AxiosComponent,
   },
   data() {
     return {
