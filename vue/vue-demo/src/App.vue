@@ -12,6 +12,10 @@
   <my-component3/>
   <swiper-component/>
   <AxiosComponent/>
+  <RouterLink to="/">首页</RouterLink> | 
+  <RouterLink to="/about">关于</RouterLink> |
+  <RouterLink to="/news">新闻</RouterLink> |
+  <RouterView></RouterView>
 </template>
 
 <script>

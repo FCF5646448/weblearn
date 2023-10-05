@@ -8,6 +8,7 @@
 <script>
 // import axios from 'axios'
 import querystring from 'querystring'
+import api from "../api/index"
 
 export default {
     name: 'axiosComponent',
@@ -26,11 +27,19 @@ export default {
         //     this.chenpin = res.data.chengpinDetails[0]
         // })
 
-        this.$axios.get("http://iwenwiki.com/api/blueberrypai/getChengpinDetails.php")
-            .then(res => {
+        // this.$axios.get("http://iwenwiki.com/api/blueberrypai/getChengpinDetails.php")
+        //     .then(res => {
+        //     console.log(res.data);
+        //     this.chenpin = res.data.chengpinDetails[0]
+        // })
+        api.getChengpin().then( res => {
             console.log(res.data);
             this.chenpin = res.data.chengpinDetails[0]
-        })
+        }),
+
+        // api.fingerUnion().then( res => {
+        //     console.log(res.data);
+        // })
 
         // post请求方式
         // axios({
