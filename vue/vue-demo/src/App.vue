@@ -16,6 +16,7 @@
   <RouterLink to="/about">关于</RouterLink> |
   <RouterLink to="/news">新闻</RouterLink> |
   <RouterView></RouterView>
+  <p>counter = {{ $store.state.counter }}</p>
 </template>
 
 <script>

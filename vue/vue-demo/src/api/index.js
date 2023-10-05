@@ -7,6 +7,9 @@ const api = {
     },
     fingerUnion() {
         return axios.get(path.baseUrl + path.fingerUnion)
+    },
+    generator() {
+        return axios.get(path.baseUrl + path.generator)
     }
 }
 
